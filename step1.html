@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Шаг 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="center">
+    <h2>Думаю это первый вопрос</h2>
+    <p>В какой день произошел распад моей власти? (ДД.ММ.ГГГГ)</p>
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">Проверить</button>
+    <p id="result"></p>
+  </main>
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.trim();
+      if (input === "13.04.2024") {
+        window.location.href = "step2.html";
+      } else {
+        result.innerHTML = `
+          <p>Нет, не то 😅 Попробуй ещё!</p>
+          <img src="https://media.tenor.com/2roX3uxz_68AAAAC/cat-computer.gif" alt="Милый котик" style="max-width:180%; border-radius:100px; margin-top:1em;">
+        `;
+      }
+    }
+	document.getElementById("answer").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    checkAnswer();
+  }
+});
+
+  </script>
+</body>
+</html>

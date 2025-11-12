@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Шаг 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="center">
+    <h2>Вопрос следующий</h2>
+    <p>Число пи до 15 знака</p>
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">Проверить</button>
+    <p id="result"></p>
+  </main>
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.trim().toLowerCase();
+      if (input === "ofc2025" || input === "office") {
+        window.location.href = "final.html";
+      } else {
+        window.location.href = "final.html";
+      }
+    }
+  </script>
+</body>
+</html>
